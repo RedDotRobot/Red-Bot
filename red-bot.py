@@ -7,6 +7,7 @@ from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
 import os											#idfk tbh
 import discord										#Discord stuff
 from discord.ext import commands
+from dotenv import load_dotenv						#.env
 from datetime import datetime						#Datetime
 import datetime as dt
 import requests										#JSON Requests
@@ -21,6 +22,8 @@ import random										#Game maybe??? (foreshadowing)
 
 #Introduce Bot
 bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
+load_dotenv()
+token = os.getenv("token")
 yf.pdr_override()
 botStatus = "online"
 
@@ -274,4 +277,4 @@ def addLog(user, server, channel, content, output, time):
 	f.write("\n\nUser: {}\nLocation: {} -> #{}\nCommand: {}\nResponse: {}\nTime: {}".format(user, server, channel, content, output, time))
 	f.close
 		
-bot.run('OTkzNDE3MDY2NDI4MjQ4MDY1.G-hQpN.FfJ11XVSO5WzkBfpqp8VLmLWfKPgAH5-5bOa6Y')
+bot.run(token)
