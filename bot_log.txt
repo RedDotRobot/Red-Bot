@@ -1,0 +1,1193 @@
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 207.78ms
+Time: 2022-07-16 12:27:06.817000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 207.78ms
+Time: 2022-07-16 12:27:09.098000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-16 12:28:04.704000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-16 12:29:46.542000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-18 11:25:52.560000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 78246897312647891234x126347891236478612374
+Response: 9,886,330,471,250,346,044,708,870,606,212,745,396,224
+Time: 2022-07-18 11:26:04.413000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5mx5m
+Response: 25,000,000,000,000
+Time: 2022-07-18 11:26:14.536000
+
+User: MELON DOGGE#6969
+Location: Failure Club -> #bot-commands
+Command: !calc -3 *4
+Response: -3
+Time: 2022-07-18 11:26:19.304000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 4162347896123846x23469871326478913256
+Response: 97,689,769,538,066,876,084,530,051,534,553,088
+Time: 2022-07-18 11:28:27.915000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc (12374698173617846234867+1874623798648231647892613847)(153451234132x12431234)
+Response: 3,576,033,841,850,988,678,921,885,687,729,588,970,094,329,856
+Time: 2022-07-18 11:29:29.086000
+
+User: Ben Dover#9757
+Location: Failure Club -> #bot-commands
+Command: !calc 6+3-3+24-5-3+1+5-1
+Response: 27
+Time: 2022-07-18 11:29:59.945000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 212.79ms
+Time: 2022-07-18 11:30:09.610000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5(12378496+1243)
+Response: 61,898,695
+Time: 2022-07-18 11:32:49.850000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 12378496+1243
+Response: 12,379,739
+Time: 2022-07-18 11:33:02.093000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 209.73ms
+Time: 2022-07-19 07:30:22.224000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-07-19 07:30:23.436000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 1234565432*123414141
+Response: 152,362,832,298,573,920
+Time: 2022-07-19 08:09:55.753000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 221.08ms
+Time: 2022-07-19 11:52:21.776000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-07-19 11:52:23.941000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-19 11:52:28.323000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 142789x1428379
+Response: 203,956,809,031
+Time: 2022-07-19 11:52:32.564000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-20 09:23:23.689000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1324671823463178241279384**2
+Response: 1,754,755,439,877,261,784,416,448,492,761,560,292,377,113,919,488
+Time: 2022-07-20 09:23:28.830000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 6472189364978326487912364879123x162738469138725391672486132547863124876312587
+Response: 1,053,274,189,232,512,094,087,461,544,561,554,413,096,344,768,044,242,774,279,035,303,305,777,512,448
+Time: 2022-07-20 09:23:36.374000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !test
+Response: Bot is currently functional
+Time: 2022-07-20 09:23:54.414000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 6x6
+Response: 36
+Time: 2022-07-20 10:20:35.059000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 82828*2
+Response: 165,656
+Time: 2022-07-20 10:20:41.922000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 27+2
+Response: 29
+Time: 2022-07-20 10:21:15.866000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 21821822828^2
+Response: 21,821,822,830
+Time: 2022-07-20 10:33:15.055000
+
+User: dit#7982
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 7x9
+Response: 63
+Time: 2022-07-20 10:35:04.158000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !test
+Response: Bot is currently functional
+Time: 2022-07-20 10:36:11.379000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 211.70ms
+Time: 2022-07-20 10:36:13.465000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5
+Response: 5
+Time: 2022-07-20 10:58:16.987000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1245643124*2
+Response: 2,491,286,248
+Time: 2022-07-20 10:59:00.028000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1234244124*12312312312321
+Response: 15,196,399,124,335,046,950,912
+Time: 2022-07-20 10:59:27.002000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 123456786543234543*21343124343244
+Response: 2,634,953,546,209,587,688,999,894,384,640
+Time: 2022-07-20 10:59:40.854000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-07-21 00:06:04.897000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 4612673456127345886712354167832x1254678132546723547681235476
+Response: 5,787,420,517,981,699,152,107,106,444,664,125,338,250,186,511,472,687,841,280
+Time: 2022-07-21 00:06:20.585000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-07-24 04:55:30.897000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #dank-memer-bal-check
+Command: !calc 7kx385
+Response: 2,695,000
+Time: 2022-07-25 07:59:08.555000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 238.56ms
+Time: 2022-08-04 02:25:55.994000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 239.14ms
+Time: 2022-08-04 02:26:43.128000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 237.35
+Time: 2022-08-04 02:27:05.815000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 123647532146781523674851236784516782345867123567421x512346751236784518723
+Response: 63,350,411,393,849,392,996,615,572,560,475,992,258,455,172,763,593,005,321,511,556,148,625,408
+Time: 2022-08-04 02:31:18.941000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 123647123456172834512**2
+Response: 15,288,611,138,986,046,411,099,184,948,768,690,667,520
+Time: 2022-08-04 02:31:29.883000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 123x123
+Response: 15,129
+Time: 2022-08-04 11:13:55.528000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1234234x123124312
+Response: 151,964,212,097,008
+Time: 2022-08-04 11:14:16.064000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 215.02
+Time: 2022-08-04 12:26:46.733000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 230.46
+Time: 2022-08-04 12:27:15.519000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 230.46
+Time: 2022-08-04 12:27:18.628000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 230.46
+Time: 2022-08-04 12:27:27.548000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 213.19
+Time: 2022-08-05 10:47:32.312000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 210.79
+Time: 2022-08-05 10:47:39.087000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1253671258376521376858765x123765126748528671457681253
+Response: 155,160,782,193,957,612,689,929,717,945,693,703,226,750,643,732,480
+Time: 2022-08-05 10:51:57.830000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 999999999999999999999x999999999999999999999999999x9999999999999
+Response: 9,999,999,999,999,000,420,486,458,798,823,447,869,457,835,463,538,632,808,202,240
+Time: 2022-08-05 10:52:08.165000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-05 10:58:24.483000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 212.94
+Time: 2022-08-05 10:58:27.679000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !status
+Response: Bot is currently functional
+Time: 2022-08-05 11:00:39.621000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !botstatus
+Response: Bot is currently functional
+Time: 2022-08-05 11:00:42.365000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-05 11:00:44.075000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-05 11:01:24.927000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 00:03:46.693000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1
+Response: 1
+Time: 2022-08-08 00:14:52.563000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-08 00:15:24.070000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 00:18:50.231000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 2
+Response: 2
+Time: 2022-08-08 00:19:58.977000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 99999999999
+Response: 99,999,999,999
+Time: 2022-08-08 00:20:52.877000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 99999999999999999999999999999999999999999999999999x99999999999999999999999999999999999999999x9999999999999999
+Response: 99,999,999,999,999,996,881,384,047,029,926,983,435,371,269,061,279,689,406,644,211,752,791,525,136,670,645,395,254,002,395,395,884,805,259,264
+Time: 2022-08-08 00:21:04.748000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9999999999999999999999999999999999999999999999999999999999999**3
+Response: 999,999,999,999,999,946,594,872,951,565,228,338,993,526,868,219,488,856,544,571,440,313,594,706,493,755,982,886,960,025,179,093,529,324,993,666,087,115,356,131,035,228,239,552,737,388,526,279,268,078,143,523,691,759,154,905,886,843,985,723,392
+Time: 2022-08-08 00:21:23.902000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.99999999999
+Response: 9.999999999990001
+Time: 2022-08-08 00:21:46.294000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 78152367215368721537612537652176351278635x1527635162783576125367153671285x1236751236785126783576125367x127356712853678125376152x1253671253786152467125367
+Response: 23,574,888,415,222,730,526,633,504,486,018,573,050,705,193,078,991,098,739,911,990,050,493,794,826,860,236,495,036,197,112,174,483,723,500,687,084,858,386,877,453,338,071,315,980,191,912,689,664
+Time: 2022-08-08 00:22:26.300000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 99x99
+Response: 9,801
+Time: 2022-08-08 00:24:13.270000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9bx9m
+Response: 81,000,000,000,000,000
+Time: 2022-08-08 00:24:21.302000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 12341324mx1234312mx1234m
+Response: 18,797,576,677,414,591,247,028,172,986,777,600
+Time: 2022-08-08 00:24:36.639000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 635467213546732514876312547652316745163782456712354*251627345816723456731254765673215673254671325476
+Response: 159,900,928,298,313,307,664,701,536,156,334,452,804,590,315,644,587,134,427,719,175,195,527,596,115,601,435,727,370,233,843,810,304
+Time: 2022-08-08 00:24:51.281000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc (1551236452763854761253x7136497813264324)(51674532678456713254x1264397864798123648)
+Response: 723,308,302,742,173,177,921,499,337,249,530,992,320,099,172,599,395,164,963,373,354,581,160,361,984
+Time: 2022-08-08 00:25:08.500000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.
+Response: 9
+Time: 2022-08-08 00:26:59.482000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 00:27:14.198000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 00:27:14.493000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.99999999999x10992
+Response: 109,919.999999890089384
+Time: 2022-08-08 00:28:23.056000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 00:28:33.773000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.99999999999x10992
+Response: 109,919.999999890089384
+Time: 2022-08-08 00:28:34.513000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.99999999999x10992
+Response: 109,919.999999890089384
+Time: 2022-08-08 00:28:35.691000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 210.23
+Time: 2022-08-08 00:29:11.874000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10*99
+Response: 8,910
+Time: 2022-08-08 00:29:45.649000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**99
+Response: 8,999,999,999,999,999,948,859,130,765,266,355,329,578,537,025,198,862,586,562,510,896,759,102,769,772,101,980,841,694,466,750,283,776
+Time: 2022-08-08 00:29:55.651000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**100
+Response: 90,000,000,000,000,007,259,266,876,555,579,836,973,632,997,546,064,252,435,252,465,176,149,112,704,970,658,764,034,085,488,336,830,464
+Time: 2022-08-08 00:30:02.898000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**200
+Response: 899,999,999,999,999,938,766,978,450,986,231,177,393,407,728,551,529,114,740,216,224,023,078,551,155,561,834,981,939,214,547,812,731,505,847,466,769,090,658,864,722,134,489,538,441,379,573,387,759,651,895,578,629,933,678,539,519,311,895,434,986,290,338,141,663,395,840
+Time: 2022-08-08 00:30:08.970000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**200
+Response: 899,999,999,999,999,938,766,978,450,986,231,177,393,407,728,551,529,114,740,216,224,023,078,551,155,561,834,981,939,214,547,812,731,505,847,466,769,090,658,864,722,134,489,538,441,379,573,387,759,651,895,578,629,933,678,539,519,311,895,434,986,290,338,141,663,395,840
+Time: 2022-08-08 00:32:12.497000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1
+Response: 1
+Time: 2022-08-08 00:32:49.487000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**300
+Response: 8,999,999,999,999,999,877,736,078,905,726,557,119,115,217,970,013,208,341,738,606,375,848,438,499,591,430,035,701,079,511,562,281,358,326,014,196,033,414,667,672,993,193,041,054,654,998,969,031,445,118,079,729,303,252,367,381,331,920,452,135,925,169,143,233,459,756,645,395,642,451,410,051,758,410,133,885,493,572,391,933,869,247,188,373,752,959,917,278,380,724,998,843,592,202,352,282,995,078,987,776
+Time: 2022-08-08 00:33:20.697000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**301
+Response: 89,999,999,999,999,991,639,679,628,363,906,869,760,452,188,580,609,394,787,337,095,793,390,981,528,209,375,640,495,640,745,681,820,566,452,232,378,783,663,845,696,057,737,484,275,907,807,681,135,835,633,399,897,045,734,382,319,115,446,261,325,103,884,037,409,702,799,249,327,287,536,952,377,828,814,440,265,810,530,126,324,868,048,729,662,615,925,613,985,349,433,482,256,031,241,968,756,276,479,393,792
+Time: 2022-08-08 00:33:48.685000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**302
+Response: 900,000,000,000,000,030,599,694,854,732,807,920,495,721,743,718,456,965,954,154,445,375,404,270,765,372,551,869,198,877,375,874,093,933,448,877,092,644,363,753,502,564,461,663,089,352,988,958,216,205,092,357,306,245,972,487,098,414,594,773,797,403,758,692,895,344,267,767,339,067,003,894,014,372,734,780,084,108,401,951,469,871,257,761,824,778,033,080,628,819,398,921,438,564,924,552,741,553,761,681,408
+Time: 2022-08-08 00:33:52.307000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**303
+Response: 8,999,999,999,999,999,696,914,822,834,828,136,682,870,818,194,985,300,229,777,365,854,066,072,278,409,571,942,882,695,600,857,109,535,233,547,153,300,802,435,953,468,380,153,589,132,063,691,465,586,857,545,661,938,253,705,330,145,425,242,881,726,758,022,562,029,089,209,545,037,647,988,965,551,276,199,121,235,734,149,177,519,028,468,470,521,813,520,455,486,460,314,020,368,302,552,913,128,663,122,182,144
+Time: 2022-08-08 00:33:56.877000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**307
+Response: 90,000,000,000,000,004,979,796,345,719,080,610,879,188,504,783,257,793,838,032,135,483,756,909,869,514,827,257,870,779,818,573,351,579,071,055,688,020,457,442,735,324,943,753,816,567,440,352,285,065,518,762,906,488,094,622,302,565,107,139,086,631,801,056,174,079,988,908,274,475,425,890,921,352,679,498,646,526,902,986,449,777,490,088,216,110,050,694,288,609,004,436,355,399,169,230,394,387,604,575,220,662,272
+Time: 2022-08-08 00:34:01.535000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9x10**307 + 1
+Response: 90,000,000,000,000,004,979,796,345,719,080,610,879,188,504,783,257,793,838,032,135,483,756,909,869,514,827,257,870,779,818,573,351,579,071,055,688,020,457,442,735,324,943,753,816,567,440,352,285,065,518,762,906,488,094,622,302,565,107,139,086,631,801,056,174,079,988,908,274,475,425,890,921,352,679,498,646,526,902,986,449,777,490,088,216,110,050,694,288,609,004,436,355,399,169,230,394,387,604,575,220,662,272
+Time: 2022-08-08 00:34:25.750000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + 1
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:34:38.285000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x1000000000000000000000000000000
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:35:19.907000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x10!
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:36:02.494000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x100!
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:36:11.179000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x100!
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:36:17.846000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x1000!
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:36:22.588000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.999999999x10**307 + !calc 9.999999999x100000!
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 00:36:29.149000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 640/2.5
+Response: 256
+Time: 2022-08-08 02:14:22.017000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 2042/2.5
+Response: 816.799999999999955
+Time: 2022-08-08 02:32:50.727000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 175/200
+Response: 0.875
+Time: 2022-08-08 03:24:39.900000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 0.875x5000
+Response: 4,375
+Time: 2022-08-08 03:24:52.258000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 637/2.5
+Response: 254.800000000000011
+Time: 2022-08-08 03:25:21.153000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1620/817
+Response: 1.982864137086903
+Time: 2022-08-08 03:26:56.220000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1620/2.5
+Response: 648
+Time: 2022-08-08 03:28:04.428000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 9.999999999x10**307
+Response: 99,999,999,990,000,002,894,207,412,105,326,218,771,638,272,989,116,167,192,499,657,728,062,392,650,459,236,329,905,234,044,004,419,809,597,637,900,269,109,333,094,511,321,722,835,705,582,499,979,648,505,284,869,709,379,457,933,264,361,829,911,004,251,557,693,059,119,267,925,291,146,726,899,858,558,280,618,307,544,484,372,810,959,908,646,520,764,127,586,371,063,377,307,042,167,421,302,865,481,207,350,558,720
+Time: 2022-08-08 03:31:26.350000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 9.999999999x10**308
+Response: inf
+Time: 2022-08-08 03:31:33.275000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 9.999999999x10**00000
+Response: 9.999999999
+Time: 2022-08-08 03:31:46.874000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 10 x 10!
+Response: 10
+Time: 2022-08-08 03:32:31.318000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 10 fact10
+Response: 10
+Time: 2022-08-08 03:32:49.656000
+
+User: Hiraeth#2234
+Location: Failure Club -> #bot-commands
+Command: !calc 12
+Response: 12
+Time: 2022-08-08 04:15:38.418000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 290/30
+Response: 9.666666666666666
+Time: 2022-08-08 04:52:23.297000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-08 12:17:41.681000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1275367812536712537865217635216783582135876251876358712x178263517862358762153876152763517263517283576182537615287365128673587x5167235786215367245167536721564752143751276
+Response: 1,174,779,079,841,091,438,255,492,917,358,439,178,739,613,617,754,115,762,940,030,379,722,610,675,380,331,054,021,576,187,871,794,141,629,908,038,048,318,488,682,908,797,219,964,337,637,839,433,887,456,274,559,128,305,664
+Time: 2022-08-08 12:18:23.780000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1275367812536712537865217635216783582135876251876358712x178263517862358762153876152763517263517283576182537615287365128673587x5167235786215367245167536721564752143751276
+Response: 1,174,779,079,841,091,438,255,492,917,358,439,178,739,613,617,754,115,762,940,030,379,722,610,675,380,331,054,021,576,187,871,794,141,629,908,038,048,318,488,682,908,797,219,964,337,637,839,433,887,456,274,559,128,305,664
+Time: 2022-08-08 12:18:45.884000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1275367812536712537865217635216783582135876251876358712x178263517862358762153876152763517263517283576182537615287365128673587x5167235786215367245167536721564752143751276**3
+Response: 31,366,984,022,465,069,659,309,531,198,036,350,330,302,504,535,242,689,656,871,992,538,292,398,124,808,695,421,066,718,591,877,487,503,471,567,336,396,242,333,683,287,199,528,756,047,865,151,948,755,159,208,561,042,929,450,718,092,211,688,353,635,858,292,869,897,326,775,133,132,005,586,273,506,493,144,005,427,446,367,329,380,728,832
+Time: 2022-08-08 12:18:53.517000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 211.19
+Time: 2022-08-08 12:21:21.565000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 9.9999x10*350
+Response: 34,999.650000000001455
+Time: 2022-08-08 12:22:11.687000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 9.9999x10*500
+Response: 49,999.5
+Time: 2022-08-08 12:22:21.953000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 9.9999x10**200
+Response: 999,989,999,999,999,938,014,713,771,059,412,249,473,604,176,239,326,601,926,579,043,658,390,247,277,012,377,227,430,015,218,903,475,260,686,346,132,628,653,404,580,005,138,646,301,783,672,222,954,288,862,048,768,970,908,334,223,020,791,143,650,623,994,260,411,645,952
+Time: 2022-08-08 12:22:31.776000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 9.9999x10**300
+Response: 9,999,900,000,000,001,227,806,543,022,618,957,523,384,151,989,866,485,451,276,620,873,936,294,749,401,063,779,757,689,687,674,077,533,097,185,498,767,946,782,120,484,401,346,479,833,358,227,344,413,171,028,659,732,119,799,537,365,524,829,947,750,394,037,847,098,280,883,143,494,947,245,860,609,017,061,735,624,276,558,833,013,276,594,588,089,171,097,496,454,189,389,720,783,429,849,527,411,309,281,280
+Time: 2022-08-08 12:22:52.313000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 9.9999x10**300
+Response: 9,999,900,000,000,001,227,806,543,022,618,957,523,384,151,989,866,485,451,276,620,873,936,294,749,401,063,779,757,689,687,674,077,533,097,185,498,767,946,782,120,484,401,346,479,833,358,227,344,413,171,028,659,732,119,799,537,365,524,829,947,750,394,037,847,098,280,883,143,494,947,245,860,609,017,061,735,624,276,558,833,013,276,594,588,089,171,097,496,454,189,389,720,783,429,849,527,411,309,281,280
+Time: 2022-08-08 12:22:57.559000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.9999x10**300
+Response: 9,999,900,000,000,001,227,806,543,022,618,957,523,384,151,989,866,485,451,276,620,873,936,294,749,401,063,779,757,689,687,674,077,533,097,185,498,767,946,782,120,484,401,346,479,833,358,227,344,413,171,028,659,732,119,799,537,365,524,829,947,750,394,037,847,098,280,883,143,494,947,245,860,609,017,061,735,624,276,558,833,013,276,594,588,089,171,097,496,454,189,389,720,783,429,849,527,411,309,281,280
+Time: 2022-08-08 12:28:46.137000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9.99999x10**300
+Response: 9,999,990,000,000,000,595,323,496,599,101,677,990,678,632,428,960,080,939,370,349,126,999,851,596,840,280,140,053,111,344,491,438,529,703,058,544,372,749,581,804,531,149,252,891,858,516,625,864,104,397,465,711,608,696,788,292,918,786,123,466,879,192,496,595,244,148,667,429,086,694,230,316,132,252,414,941,483,099,530,568,322,610,110,672,138,016,490,261,230,961,979,997,328,110,466,741,875,735,789,568
+Time: 2022-08-08 21:11:35.748000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 1bx1b
+Response: 1,000,000,000,000,000,000
+Time: 2022-08-08 21:12:14.822000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !help
+Response: Printed help menu
+Time: 2022-08-08 21:19:25.205000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 123456789x123456789
+Response: 15,241,578,750,190,520
+Time: 2022-08-09 01:47:15.057000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-09 01:48:56.969000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1280/2.5
+Response: 512
+Time: 2022-08-09 01:53:55.863000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-09 01:57:02.859000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-09 01:59:15.268000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 1234x1234
+Response: 1,522,756
+Time: 2022-08-09 02:10:19.724000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9**300
+Response: 18,739,277,038,847,940,126,292,801,064,540,653,525,539,459,183,097,181,480,576,177,205,295,038,836,045,317,362,638,082,219,510,554,074,123,139,809,478,307,156,371,503,690,059,934,837,693,678,977,451,606,469,950,732,355,498,463,735,878,808,369,218,480,804,704,688,930,208,969,814,753,696,010,325,079,938,624,192,365,325,243,724,444,058,183,560,803,740,777,781,522,222,077,853,040,640
+Time: 2022-08-09 02:13:50.332000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 9**300
+Response: 18,739,277,038,847,940,126,292,801,064,540,653,525,539,459,183,097,181,480,576,177,205,295,038,836,045,317,362,638,082,219,510,554,074,123,139,809,478,307,156,371,503,690,059,934,837,693,678,977,451,606,469,950,732,355,498,463,735,878,808,369,218,480,804,704,688,930,208,969,814,753,696,010,325,079,938,624,192,365,325,243,724,444,058,183,560,803,740,777,781,522,222,077,853,040,640
+Time: 2022-08-09 02:15:32.817000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 2
+Response: 2
+Time: 2022-08-09 07:41:43.826000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5-7
+Response: -2
+Time: 2022-08-09 07:41:51.795000
+
+User: Hiraeth#2234
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5-9.9999999999999*103214567876543456535
+Response: -1,032,145,678,765,424,377,856
+Time: 2022-08-09 07:42:11.585000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-09 07:43:38.440000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 9x9
+Response: 81
+Time: 2022-08-10 11:23:30.290000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 9.9999999999999x10xx300
+Response: 9,999,999,999,999,900,597,511,352,845,022,382,457,244,810,137,763,950,728,472,989,643,810,376,032,020,135,926,651,552,571,630,576,405,126,310,296,622,079,147,295,186,531,385,815,315,208,319,421,230,203,506,284,668,821,928,346,905,421,737,824,268,644,351,952,066,948,667,541,790,319,376,854,616,373,096,161,048,033,425,234,259,500,788,743,796,458,377,390,018,950,070,176,251,022,111,623,153,658,626,048
+Time: 2022-08-10 11:23:45.926000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 10xx250
+Response: 9,999,999,999,999,999,210,968,330,832,147,026,575,540,427,693,752,222,372,866,517,696,718,412,616,639,336,002,780,474,141,705,354,144,110,364,081,118,142,324,010,404,785,714,541,315,284,281,257,752,757,291,623,642,503,417,072,967,859,774,120,474,650,369,161,140,553,335,192,009,630,674,782,085,554,695,972,153,397,552,576,515,276,800
+Time: 2022-08-10 11:35:25.169000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 10xx9
+Response: 1,000,000,000
+Time: 2022-08-10 11:35:35.805000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 10xx250
+Response: 9,999,999,999,999,999,210,968,330,832,147,026,575,540,427,693,752,222,372,866,517,696,718,412,616,639,336,002,780,474,141,705,354,144,110,364,081,118,142,324,010,404,785,714,541,315,284,281,257,752,757,291,623,642,503,417,072,967,859,774,120,474,650,369,161,140,553,335,192,009,630,674,782,085,554,695,972,153,397,552,576,515,276,800
+Time: 2022-08-10 11:36:03.140000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-10 11:43:30.756000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-10 11:43:37.014000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 999999
+Response: 999,999
+Time: 2022-08-10 11:46:58.400000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-10 11:52:48.633000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-13 11:16:47.049000
+
+User: aethra_#0322
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !help
+Response: Printed help menu
+Time: 2022-08-13 11:30:28.851000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-13 11:32:40.211000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !ping
+Response: 212.54
+Time: 2022-08-13 11:32:42.474000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-13 11:32:44.783000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-13 11:32:49.509000
+
+User: aethra_#0322
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-13 11:33:03.804000
+
+User: aethra_#0322
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-13 11:33:13.940000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-13 12:20:03
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-13 12:20:35.617000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-15 11:13:03.647000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-19 05:22:43.231000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-19 05:29:25.807000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-19 09:41:09.572000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-19 10:47:21.931000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-19 11:25:20.904000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !ping
+Response: 206.66
+Time: 2022-08-20 11:04:58.293000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-21 02:21:03.720000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 334k+210k+335.5k
+Response: 879,500
+Time: 2022-08-21 02:37:52.323000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 879,500x0.05
+Response: 43,975
+Time: 2022-08-21 02:39:50.526000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !c 1x10xx100
+Response: 10,000,000,000,000,000,159,028,911,097,599,180,468,360,808,563,945,281,389,781,327,557,747,838,772,170,381,060,813,469,985,856,815,104
+Time: 2022-08-21 04:51:24.760000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 5x5
+Response: 25
+Time: 2022-08-22 01:40:49.559000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 10**10
+Response: 10,000,000,000
+Time: 2022-08-22 01:40:55.286000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !calc 10**100
+Response: 10,000,000,000,000,000,159,028,911,097,599,180,468,360,808,563,945,281,389,781,327,557,747,838,772,170,381,060,813,469,985,856,815,104
+Time: 2022-08-22 01:41:05.506000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-22 01:41:42.737000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !test
+Response: Bot is currently offline
+Time: 2022-08-23 11:26:54.675000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !test
+Response: Bot is currently functional
+Time: 2022-08-23 11:27:30.921000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !test
+Response: Bot is currently offline
+Time: 2022-08-23 11:29:19.776000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #calculator
+Command: !purge 99
+Response: Purged 100 messages
+Time: 2022-08-24 09:36:17.067000
+
+User: greengas#8665
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !weather
+Response: Printed current weather
+Time: 2022-08-24 09:56:26.458000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !asx bkl
+Response: Returned stock data on BKL
+Time: 2022-08-24 09:57:38.910000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !asx tsla
+Response: Returned stock data on TSLA
+Time: 2022-08-24 09:58:09.005000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !asx nhl
+Response: Returned stock data on NHL
+Time: 2022-08-24 09:58:25.882000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #genæral-deeez-nawts-in-ur-mouth
+Command: !asx shl
+Response: Returned stock data on SHL
+Time: 2022-08-24 09:59:10.950000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands-2
+Command: !ping
+Response: 266.68
+Time: 2022-08-24 10:14:02.457000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands-2
+Command: !ping
+Response: 266.68
+Time: 2022-08-24 10:14:27.761000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands-2
+Command: !ping
+Response: 266.68
+Time: 2022-08-24 10:14:29.734000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands-2
+Command: !ping
+Response: 282.74
+Time: 2022-08-24 10:14:51.931000
+
+User: RedDotRobot#7360
+Location: RedDotRobot's server -> #dank-memer-bal-check
+Command: !purge 9999
+Response: Purged 10000 messages
+Time: 2022-08-24 10:03:45.505000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !test
+Response: Bot is currently functional
+Time: 2022-09-04 10:38:49.975000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !calc 5x5
+Response: 25
+Time: 2022-09-05 11:17:49.179000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !purge 5
+Response: Purged 6 messages
+Time: 2022-09-05 11:17:54.035000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-level-up-channel
+Command: !purge 99
+Response: Purged 100 messages
+Time: 2022-09-05 11:18:23.306000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !purge 50
+Response: Purged 51 messages
+Time: 2022-09-05 11:21:29.623000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #annoucements
+Command: !purge 10
+Response: Purged 11 messages
+Time: 2022-09-06 12:57:17.293000
+
+User: RedDotRobot#7360
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-09-06 13:41:44.401000
+
+User: STAPLEGUNLOVER#2572
+Location: Failure Club -> #bot-commands
+Command: !weather
+Response: Printed current weather
+Time: 2022-09-09 02:35:00.605000
