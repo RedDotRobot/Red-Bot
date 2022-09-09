@@ -276,5 +276,5 @@ def addLog(user, server, channel, content, output, time):
 	f = open("bot_log.txt","a")
 	f.write("\n\nUser: {}\nLocation: {} -> #{}\nCommand: {}\nResponse: {}\nTime: {}".format(user, server, channel, content, output, time))
 	f.close
-		
+
 bot.run(token)
