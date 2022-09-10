@@ -23,7 +23,7 @@ import random										#Game maybe??? (foreshadowing)
 #Introduce Bot
 bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
 load_dotenv()
-token = os.getenv("token")
+botToken = os.getenv("token")
 yf.pdr_override()
 botStatus = "online"
 
@@ -277,4 +277,4 @@ def addLog(user, server, channel, content, output, time):
 	f.write("\n\nUser: {}\nLocation: {} -> #{}\nCommand: {}\nResponse: {}\nTime: {}".format(user, server, channel, content, output, time))
 	f.close
 
-bot.run(token)
+bot.run(botToken)
