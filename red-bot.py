@@ -23,7 +23,7 @@ import random										#Game maybe??? (foreshadowing)
 #Introduce Bot
 bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
 load_dotenv()
-botToken = os.getenv("token")
+botToken = os.getenv("botToken")
 yf.pdr_override()
 botStatus = "online"
 
@@ -114,7 +114,7 @@ async def train(ctx, *args):
 async def weather(ctx):
 	if botStatus == "online":
 		#Grab Data
-		url = "https://api.openweathermap.org/data/2.5/weather?lat=-33.868820&lon=151.209290&appid=c54411d90643582806d274cc9b3dc5bf&units=metric"
+		url = os.getenv("weatherURL")
 		response = requests.get(url)
 		data = json.loads(response.text)
 
