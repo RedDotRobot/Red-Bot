@@ -59,20 +59,20 @@ async def on_ready():
 	if botStatus == "online":
 		while True:
 			os.system("cls")
-			print('==========================')
-			print('Logged in as')
+			print("==========================")
+			print("Logged in as")
 			print(bot.user.name)
 			print(currentDatetime("time"))
-			print('==========================')
+			print("==========================")
 			await asyncio.sleep(1)
 	elif botStatus == "offline":
 		os.system("cls")
-		print('Status = offline\n')
-		print('==========================')
-		print('Logged in as')
+		print("Status = offline\n")
+		print("==========================")
+		print("Logged in as")
 		print(bot.user.name)
 		print(currentDatetime("time"))
-		print('==========================')
+		print("==========================")
 
 @bot.command(aliases=["c","calculate"])
 async def calc(ctx, arg):
