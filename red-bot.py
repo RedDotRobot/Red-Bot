@@ -104,7 +104,7 @@ async def ping(ctx):
 async def train(ctx, *args):
 	if botStatus == "online":
 		url = "https://api.transport.nsw.gov.au/v2/gtfs/realtime/sydneytrains"
-		response = requests.get(url, headers = {"Authorization": "7nNBGOYjX8zfQVHu3HwrseRO4WsciGJqvaFy"})
+		response = requests.get(url, headers = {"Authorization": ""})
 		data = json.loads(response.text)
 		await ctx.send(data)
 	elif botStatus == "offline":
