@@ -224,6 +224,13 @@ async def finddad(ctx):
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
 
+#The beginning of the end of me
+#(economy game)
+
+@bot.activity
+async def balance(ctx):
+	print(ctx)
+
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
 	if botStatus == "online":
