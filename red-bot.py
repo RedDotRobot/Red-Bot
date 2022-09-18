@@ -19,7 +19,6 @@ import re											#RegEx kinda pog
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
 import random										#Game maybe??? (foreshadowing)
-from pysondb import db								
 
 #Introduce Bot
 bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
@@ -220,6 +219,8 @@ async def finddad(ctx):
 
 @bot.command()
 async def balance(ctx):
+	with open(f"User_Data/{ctx.author.id}.json", "w", encoding='utf-8') as f:
+		json.dump(None, f, ensure_ascii=False, indent=4)
 	await ctx.send(ctx)
 
 @bot.command(aliases=["t","status","botstatus"])
