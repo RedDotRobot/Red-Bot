@@ -19,6 +19,7 @@ import re											#RegEx kinda pog
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
 import random										#Game maybe??? (foreshadowing)
+from pysondb import db								
 
 #Introduce Bot
 bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
@@ -97,16 +98,6 @@ async def ping(ctx):
 		embed.set_footer(text=f"Today at {time} | {date}")
 		await ctx.send(embed=embed)
 		addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, latency, ctx.message.created_at)
-	elif botStatus == "offline":
-		bot.dispatch("botOffline", ctx)
-
-@bot.command()
-async def train(ctx, *args):
-	if botStatus == "online":
-		url = "https://api.transport.nsw.gov.au/v2/gtfs/realtime/sydneytrains"
-		response = requests.get(url, headers = {"Authorization": ""})
-		data = json.loads(response.text)
-		await ctx.send(data)
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
 
@@ -227,9 +218,9 @@ async def finddad(ctx):
 #The beginning of the end of me
 #(economy game)
 
-@bot.activity
+@bot.command()
 async def balance(ctx):
-	print(ctx)
+	await ctx.send(ctx)
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
