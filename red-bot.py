@@ -25,7 +25,11 @@ bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.
 load_dotenv()
 botToken = os.getenv("botToken")
 yf.pdr_override()
+con = sql.connect("User_Data.db")
+cur = con.cursor()
+
 botStatus = "online"
+botClock = "offline"
 
 #Do all the weird time shit
 def currentDatetime(format):
@@ -56,7 +60,7 @@ otherWeather = ["701", "711", "721", "731", "741", "751", "761", "762", "771", "
 
 @bot.event
 async def on_ready():
-	if botStatus == "online":
+	if botClock == "online":
 		while True:
 			os.system("cls")
 			print("==========================")
@@ -216,12 +220,6 @@ async def finddad(ctx):
 
 #The beginning of the end of me
 #(economy game)
-
-@bot.command()
-async def balance(ctx):
-	with open(f"User_Data/{ctx.author.id}.json", "w", encoding='utf-8') as f:
-		json.dump(None, f, ensure_ascii=False, indent=4)
-	await ctx.send(ctx)
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
