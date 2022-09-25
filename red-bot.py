@@ -1,12 +1,16 @@
 #Import Modules
 from array import array								#No idea
 from ast import alias, operator						#I didn't put that there wtf
-import asyncio										#um
+import asyncio
+from http import client								#um
 from pydoc import describe							#uh
 from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
 import os											#idfk tbh
 import discord										#Discord stuff
 from discord.ext import commands
+from discord import FFmpegAudio
+from discord import TextChannel
+from youtube_dl import YoutubeDL
 from dotenv import load_dotenv						#.env
 from datetime import datetime						#Datetime
 import datetime as dt
