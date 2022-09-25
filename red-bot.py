@@ -25,8 +25,6 @@ bot = commands.Bot(command_prefix='!', activity = discord.Activity(type=discord.
 load_dotenv()
 botToken = os.getenv("botToken")
 yf.pdr_override()
-con = sql.connect("User_Data.db")
-cur = con.cursor()
 
 botStatus = "online"
 botClock = "offline"
@@ -69,7 +67,7 @@ async def on_ready():
 			print(currentDatetime("time"))
 			print("==========================")
 			await asyncio.sleep(1)
-	elif botStatus == "offline":
+	else:
 		os.system("cls")
 		print("Status = offline\n")
 		print("==========================")
@@ -218,8 +216,15 @@ async def finddad(ctx):
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
 
-#The beginning of the end of me
-#(economy game)
+#Fuck the eco game, introducing music bot
+@bot.command()
+async def join(ctx):
+	channel = ctx.author.voice.channel
+	await channel.connect()
+
+@bot.command()
+async def leave(ctx):
+	await ctx.voice_client.disconnect()
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
