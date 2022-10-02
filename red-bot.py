@@ -2,8 +2,7 @@
 from array import array								#No idea
 from ast import alias, operator						#I didn't put that there wtf
 import asyncio
-from http import client
-from operator import eq								#um
+from http import client								#um
 from pydoc import describe							#uh
 from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
 import os											#idfk tbh
@@ -88,27 +87,8 @@ async def on_ready():
 async def calc(ctx, arg):
 	if botStatus == "online":
 		equation = str(arg)
-		replacements = {
-		"x": "*",
-		",": "",
-		"^": "**",
-		"k": "*1000",
-		"m": "*1000000",
-		"b": "*1000000000",
-		")(": ")*(",
-		"0(": "0*(",
-		"1(": "1*(",
-		"2(": "2*(",
-		"3(": "3*(",
-		"4(": "4*(",
-		"5(": "5*(",
-		"6(": "6*(",
-		"7(": "7*(",
-		"8(": "8*(",
-		"9(": "9*(",
-			}
-		equation = str(equation)
-		equation = "".join([replacements.get(c, c) for c in equation])
+		equation = equation.replace("x", "*").replace(",", "").replace("^", "**").replace("k", "*1000").replace("m", "*1000000").replace("b", "*1000000000").replace(")(", ")*(")
+		equation = equation.replace("0(", "0*(").replace("2(", "2*(").replace("3(", "3*(").replace("4(", "4*(").replace("5(", "5*(").replace("6(", "6*(").replace("7(", "7*(").replace("8(", "8*(").replace("9(", "9*(").replace(")0", ")*0").replace(")2", ")*2").replace(")3", ")*3").replace(")4", ")*4").replace(")5", ")*5").replace(")6(", ")*6").replace(")7", ")*7").replace(")8", ")*8").replace(")9", ")*9")
 		result = eval(equation)
 		result = f"{result:,.15f}".rstrip('0').rstrip('.')
 		await ctx.send(result)
@@ -148,10 +128,10 @@ async def weather(ctx):
 		humidity = data["main"]["humidity"]
 		embed=discord.Embed(title="**Weather Report**", url="https://www.msn.com/en-au/weather/weathertoday/Sydney-CBD,NSW,Australia/we-city?iso=AU&sethome=true&el=50s01jWY87RMHiXLHjA2pA%3D%3D&day=7&day=10", color=0x00dde0)
 		embed.add_field(name="Current temperature ㅤ", value=f"{temp}°C", inline=True)
-		embed.add_field(name="Weather			 ㅤ", value=f"{weatherDescription}", inline=True)
+		embed.add_field(name="Weather             ㅤ", value=f"{weatherDescription}", inline=True)
 		embed.add_field(name = chr(173), value = chr(173)) #Embed linebreak
-		embed.add_field(name="Feels Like		  ㅤ", value=f"{feelTemp}°C", inline=True)
-		embed.add_field(name="Humidity			ㅤ", value=f"{humidity}%", inline=True)
+		embed.add_field(name="Feels Like          ㅤ", value=f"{feelTemp}°C", inline=True)
+		embed.add_field(name="Humidity            ㅤ", value=f"{humidity}%", inline=True)
 		embed.add_field(name="Temperature range   ㅤ", value=f"{minTemp}°C - {maxTemp}°C", inline=True)
 		embed.set_image(url="attachment://")
 		if weatherID in clearWeather: #Clear
@@ -229,17 +209,9 @@ async def thisisfine(ctx):
 @bot.command(aliases=["fd", "dad"])
 async def finddad(ctx):
 	if botStatus == "online":
-		randInt = random.randint(1, 5)
-		if randInt == 1:
-			await ctx.send("\U0001F95B Your dad left to get the milk, who knows when he'll be back")
-		elif randInt == 2:
-			await ctx.send("Unfortunately, you're dad died of disappointment when you were born")
-		elif randInt == 3:
-			await ctx.send("You're an orphan...")
-		elif randInt == 4:
-			await ctx.send("Your dad left you at a young age. Wake up")
-		elif randInt == 5:
-			await ctx.send("Keep dreaming kiddo")
+		with open("finddad_responses.txt") as f:
+			words = f.readlines()
+		await ctx.send(random.choice(words))
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
 
@@ -284,7 +256,7 @@ async def setstatus(ctx, arg):
 async def help(ctx, *args):
 	if botStatus == "online":
 		if len(args) == 0:
-			embed = discord.Embed(title="**Help Menu**", description="List of commands. For additional assistance, contact `RedDotRobot#7360`\n\n`help`	 Shows this menu\n`calc`	 Simple calculator\n`weather`  Shows current weather in Sydney\n`purge`	Deletes specified number of messages\n`ping`	 Outputs bot latency\n`test`	 Shows if bot is currently functional\nFor additional assistance, contact `RedDotRobot#7360`")
+			embed = discord.Embed(title="**Help Menu**", description="List of commands. For additional assistance, contact `RedDotRobot#7360`\n\n`help`     Shows this menu\n`calc`     Simple calculator\n`weather`  Shows current weather in Sydney\n`purge`    Deletes specified number of messages\n`ping`     Outputs bot latency\n`test`     Shows if bot is currently functional\nFor additional assistance, contact `RedDotRobot#7360`")
 			time = currentDatetime("time")
 			date = currentDatetime("date")
 			embed.set_footer(text=f"Today at {time} | {date}")
