@@ -34,7 +34,7 @@ botToken = os.getenv("botToken")
 yf.pdr_override()
 
 botStatus = "online"
-botClock = "offline"
+botClock = "online"
 
 #Do all the weird time shit
 def currentDatetime(format):
@@ -76,7 +76,6 @@ async def on_ready():
 			await asyncio.sleep(1)
 	else:
 		os.system("cls")
-		print("Status = offline\n")
 		print("==========================")
 		print("Logged in as")
 		print(bot.user.name)
@@ -192,6 +191,12 @@ async def purge(ctx, limit:int):
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
 
+@bot.command(aliases=["servers", "serverlist"])
+async def server(ctx):
+	activeservers = bot.guilds
+	for guild in activeservers:
+		await ctx.send(guild.name)
+
 @bot.command()
 async def hibye(ctx):
 	if botStatus == "online":
@@ -210,10 +215,38 @@ async def thisisfine(ctx):
 async def finddad(ctx):
 	if botStatus == "online":
 		with open("finddad_responses.txt") as f:
-			words = f.readlines()
-		await ctx.send(random.choice(words))
+			line = f.readlines()
+		output = str(random.choice(line))
+		await ctx.send(output)
 	elif botStatus == "offline":
 		bot.dispatch("botOffline", ctx)
+
+@bot.command(aliases=["kiara"])
+async def kimchi(ctx):
+	await ctx.send("🍽️🐶❤️")
+
+@bot.command()
+async def monkey(ctx):
+	await ctx.send("same relatable penis among us !! h ok funny moneky")
+	await ctx.send("https://media.tenor.com/0_6MYrn00tMAAAAd/monkey-kinkytwt.gif")
+
+@bot.command(aliases=["abtin"])
+async def adiba(ctx):
+	await ctx.send("adiba ❤️ abtin")
+
+@bot.command()
+async def matilda(ctx):
+	await ctx.send("chloe smells like ms di leo")
+	await ctx.send("https://media.tenor.com/AukNDGqQS2UAAAAC/bitmoji-emoji.gif")
+
+@bot.command()
+async def sylvia(ctx):
+	await ctx.send("sylvia is mean :(")
+
+
+
+
+
 
 #Fuck the eco game, introducing music bot
 @bot.command()
