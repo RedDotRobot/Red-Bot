@@ -26,5 +26,9 @@ class sgghsMemeCog(commands.Cog):
 	async def sylvia(self, ctx):
 		await ctx.send("sylvia is mean :(")
 
+	@commands.command()
+	async def lloyd(self, ctx):
+		await ctx.send("send lloyd dick pics")
+
 async def setup(bot):
 	await bot.add_cog(sgghsMemeCog(bot))

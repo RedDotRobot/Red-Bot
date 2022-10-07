@@ -2,6 +2,7 @@
 from array import array								#No idea
 from ast import alias, operator						#I didn"t put that there wtf
 import asyncio
+from cgitb import handler
 from email import message_from_string
 from http import client
 from multiprocessing import get_context								#um
@@ -16,7 +17,6 @@ from discord import TextChannel
 from youtube_dl import YoutubeDL
 from dotenv import load_dotenv						#.env
 from datetime import datetime						#Datetime
-import datetime as dt
 import requests										#JSON Requests
 import json
 import mpmath										#Math shit, another problem for another day
@@ -26,7 +26,7 @@ import re											#RegEx kinda pog
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
 import random										#Game maybe??? (foreshadowing)
-import coloredlogs, logging
+import logging, coloredlogs
 
 #Introduce Bot
 intents = discord.Intents.default()
@@ -37,6 +37,11 @@ botToken = os.getenv("botToken")
 yf.pdr_override()
 botStatus = "online"
 botClock = "offline"
+
+#Logger
+log = logging.getLogger("red-bot.py")
+coloredlogs.install(level="INFO", fmt="%(asctime)s [%(levelname)s] %(message)s")
+coloredlogs.DEFAULT_FIELD_STYLES = "spam=22;debug=220;info=34;notice=220;warning=202;success=118,bold;error=124;critical=background=red"
 
 #Do all the weird time shit
 def currentDatetime(format):
@@ -52,30 +57,6 @@ def currentDatetime(format):
 		currentTime = datetime.now()
 		formatTimeDate = currentTime.strftime("%d-%m-%Y	%H:%M:%S")
 		return formatTimeDate
-
-#Logger
-logger = logging.getLogger("red-bot.py")
-coloredlogs.install(level="DEBUG", fmt="%(asctime)s [%(levelname)s] %(message)s")
-coloredlogs.DEFAULT_FIELD_STYLES = {
-	"asctime": {"color": "black"},
-	"hostname": {"color": "magenta"},
-	"levelname": {"bold": True, "color": "magenta"},
-	"name": {"color": "blue"},
-	"programname": {"color": "cyan"}, 
-	"username": {"color": "yellow"}
-	}
-
-coloredlogs.DEFAULT_LEVEL_STYLES = {
-	"info": {"color": "grey"},
-	"debug": {"color": "magenta"},
-	"notice": {"color": "magenta"},
-	"spam": {"color": "green", "faint": True},
-	"success": {"bold": True, "color": "green"},
-	"verbose": {"color": "blue"},
-	"error": {"color": "red"},
-	"warning": {"color": "yellow"},
-	"critical": {"bold": True, "color": "red"}
-	}
 
 #Define custom emojis
 onlineStatus = "<:onlineStatus:994214218700169216>"
@@ -93,23 +74,12 @@ thunderstormWeather = ["200", "201", "202", "210", "211", "212", "221", "230", "
 snowWeather = ["600", "601", "602", "611", "612", "613", "615", "616", "620", "621", "622"]
 otherWeather = ["701", "711", "721", "731", "741", "751", "761", "762", "771", "781"]
 
+
+
 @bot.event
 async def on_ready():
-	if botClock == "online":
-		while True:
-			os.system("cls")
-			print("==========================")
-			print("Logged in as")
-			print(bot.user.name)
-			print(currentDatetime("time"))
-			print("==========================")
-			await asyncio.sleep(1)
-	else:
-		print("==========================")
-		print("Logged in as")
-		print(bot.user.name)
-		print(currentDatetime("time"))
-		print("==========================")
+	log.info(f"Successfully logged in as {bot.user.name}")
+	print('\a')
 
 @bot.command(aliases=["c","calculate"])
 async def calc(ctx, arg):
@@ -119,7 +89,7 @@ async def calc(ctx, arg):
 	result = eval(equation)
 	result = f"{result:,.15f}".rstrip("0").rstrip(".")
 	await ctx.send(result)
-	logger.debug("did mafs")
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !calc")
 
 @bot.command(aliases=["p","latency"])
 async def ping(ctx):
@@ -129,6 +99,7 @@ async def ping(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !ping | {latency}")
 
 @bot.command(aliases=["w"])
 async def weather(ctx):
@@ -147,10 +118,10 @@ async def weather(ctx):
 	humidity = data["main"]["humidity"]
 	embed=discord.Embed(title="**Weather Report**", url="https://www.msn.com/en-au/weather/weathertoday/Sydney-CBD,NSW,Australia/we-city?iso=AU&sethome=true&el=50s01jWY87RMHiXLHjA2pA%3D%3D&day=7&day=10", color=0x00dde0)
 	embed.add_field(name="Current temperature ㅤ", value=f"{temp}°C", inline=True)
-	embed.add_field(name="Weather             ㅤ", value=f"{weatherDescription}", inline=True)
+	embed.add_field(name="Weather			 ㅤ", value=f"{weatherDescription}", inline=True)
 	embed.add_field(name = chr(173), value = chr(173)) #Embed linebreak
-	embed.add_field(name="Feels Like          ㅤ", value=f"{feelTemp}°C", inline=True)
-	embed.add_field(name="Humidity            ㅤ", value=f"{humidity}%", inline=True)
+	embed.add_field(name="Feels Like		  ㅤ", value=f"{feelTemp}°C", inline=True)
+	embed.add_field(name="Humidity			ㅤ", value=f"{humidity}%", inline=True)
 	embed.add_field(name="Temperature range   ㅤ", value=f"{minTemp}°C - {maxTemp}°C", inline=True)
 	embed.set_image(url="attachment://")
 	if weatherID in clearWeather: #Clear
@@ -175,6 +146,7 @@ async def weather(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !weather")
 
 @bot.command(aliases=["a","stock"])
 async def asx(ctx, arg):
@@ -193,12 +165,27 @@ async def asx(ctx, arg):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !asx | Stock value of {arg}")
+
+@bot.command(aliases=["suggest"])
+async def create_suggestion(ctx, title, option1, option2):
+	embed=discord.Embed(title="Suggestion", description=title)
+	embed.add_field(name=option1, value="🔴", inline=True)
+	embed.add_field(name=option2, value="🔵", inline=True)
+	time = currentDatetime("time")
+	date = currentDatetime("date")
+	embed.set_footer(text=f"Today at {time} | {date}")
+	msg = await ctx.send(embed=embed)
+	await msg.add_reaction("🔴")
+	await msg.add_reaction("🔵")
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !suggest")
 
 @bot.command(aliases=["delete","clear"])
 async def purge(ctx, limit:int):
 	if ctx.author.id == 840418841942294548:
 		limit = limit + 1
 		await ctx.channel.purge(limit=limit)
+		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Deleted {limit} messages")
 	else:
 		await ctx.send("Insufficient permissions")
 
@@ -209,6 +196,7 @@ async def server(ctx):
 	for guild in activeservers:
 		serverlist.append(guild.name)
 	await ctx.send("\n".join(map(str, serverlist)))
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !serverlist")
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
@@ -217,6 +205,7 @@ async def test(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
+	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !test")
 
 @bot.command(aliases=["ss", "statusset", "offline", "online"])
 async def setstatus(ctx, arg):
@@ -226,21 +215,24 @@ async def setstatus(ctx, arg):
 			botStatus = "online"
 			await bot.change_presence(status=discord.Status.online, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"))
 			await ctx.send("Bot is now online")
+			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Bot is now online")
 		elif arg in ["offline", "false", "no"]:
 			botStatus = "offline"
 			await bot.change_presence(status=discord.Status.dnd, activity = discord.Activity(type=discord.ActivityType.watching, name="the world burning around me"))
 			await ctx.send("Bot is now offline")
+			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Bot is now offline")
 	else:
 		ctx.send("Insufficient Permissions")
 
 @bot.command(aliases=["h","helpmenu"])
 async def help(ctx, *args):
 	if len(args) == 0:
-		embed = discord.Embed(title="**Help Menu**", description="List of commands. For additional assistance, contact `RedDotRobot#7360`\n\n`help`     Shows this menu\n`calc`     Simple calculator\n`weather`  Shows current weather in Sydney\n`purge`    Deletes specified number of messages\n`ping`     Outputs bot latency\n`test`     Shows if bot is currently functional\nFor additional assistance, contact `RedDotRobot#7360`")
+		embed = discord.Embed(title="**Help Menu**", description="List of commands. For additional assistance, contact `RedDotRobot#7360`\n\n`help`	 Shows this menu\n`calc`	 Simple calculator\n`weather`  Shows current weather in Sydney\n`purge`	Deletes specified number of messages\n`ping`	 Outputs bot latency\n`test`	 Shows if bot is currently functional\nFor additional assistance, contact `RedDotRobot#7360`")
 		time = currentDatetime("time")
 		date = currentDatetime("date")
 		embed.set_footer(text=f"Today at {time} | {date}")
 		await ctx.send(embed=embed)
+		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !help")
 
 @bot.event
 async def on_botOffline(ctx):
@@ -250,16 +242,6 @@ async def on_botOffline(ctx):
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
 
-"""async def printLog(logType, user, guild, channel, command, info):
-	print("log printed breakpoint 1")
-	timeDate = currentDatetime("timeDate")
-	if logType == "info":
-		print(f"{timeDate} [INFO] {user} {guild} => {channel} | {command} {info}")
-	elif logType == "gateway":
-		print(f"{timeDate} [GATEWAY] {info}")
-	elif logType == "error":
-		print("error has occured :(")"""
-
 async def load_extensions():
 	for filename in os.listdir("./cogs"):
 		if filename.endswith(".py"):
@@ -268,6 +250,7 @@ async def load_extensions():
 async def main():
 	async with bot:
 		await load_extensions()
+		log.info("Loaded extensions")
 		await bot.start(botToken)
 
 asyncio.run(main())
