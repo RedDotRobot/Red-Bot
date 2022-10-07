@@ -32,7 +32,6 @@ bot = commands.Bot(command_prefix='!', intents=intents, activity = discord.Activ
 load_dotenv()
 botToken = os.getenv("botToken")
 yf.pdr_override()
-
 botStatus = "online"
 botClock = "offline"
 
@@ -46,6 +45,10 @@ def currentDatetime(format):
 		currentTime = datetime.now()
 		formatDate = currentTime.strftime("%d/%m/%Y")
 		return formatDate
+	if format == "timeDate":
+		currentTime = datetime.now()
+		formatTimeDate = currentTime.strftime("%d-%m-%Y	%H:%M:%S")
+		return formatTimeDate
 
 #Define custom emojis
 onlineStatus = "<:onlineStatus:994214218700169216>"
@@ -75,7 +78,6 @@ async def on_ready():
 			print("==========================")
 			await asyncio.sleep(1)
 	else:
-		os.system("cls")
 		print("==========================")
 		print("Logged in as")
 		print(bot.user.name)
@@ -90,8 +92,7 @@ async def calc(ctx, arg):
 	result = eval(equation)
 	result = f"{result:,.15f}".rstrip('0').rstrip('.')
 	await ctx.send(result)
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, result, ctx.message.created_at)
-
+	printLog("info", ctx, "calc", None)
 
 @bot.command(aliases=["p","latency"])
 async def ping(ctx):
@@ -101,8 +102,7 @@ async def ping(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, latency, ctx.message.created_at)
-
+	printLog("info", ctx, "ping", None)
 
 @bot.command(aliases=["w"])
 async def weather(ctx):
@@ -110,7 +110,6 @@ async def weather(ctx):
 	url = os.getenv("weatherURL")
 	response = requests.get(url)
 	data = json.loads(response.text)
-
 	weather = data["weather"]
 	weatherID = str(weather[0]["id"])
 	weatherDescription = weather[0]["description"]
@@ -143,14 +142,14 @@ async def weather(ctx):
 	elif weatherID in thunderstormWeather: #Thunderstorm
 		file = discord.File("Weather_Images/thunderstormWeatherIMG.gif")
 		embed.set_image(url="attachment://thunderstormWeatherIMG.gif")
-	elif weatherID in snowWeather: #Drizzle
+	elif weatherID in snowWeather: #Snow
 		file = discord.File("Weather_Images/snowWeatherIMG.gif")
 		embed.set_image(url="attachment://snowWeatherIMG.gif")	
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, "Printed current weather", ctx.message.created_at)
+	printLog("info", ctx, "weather", None)
 
 @bot.command(aliases=["a","stock"])
 async def asx(ctx, arg):
@@ -169,16 +168,16 @@ async def asx(ctx, arg):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, f"Returned stock data on {arg}", ctx.message.created_at)
-
+	printLog("info", ctx, "asx")
 
 @bot.command(aliases=["delete","clear"])
 async def purge(ctx, limit:int):
 	if ctx.author.id == 840418841942294548:
 		limit = limit + 1
 		await ctx.channel.purge(limit=limit)
-		addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, f"Purged {limit} messages", ctx.message.created_at)
-
+		printLog("info", ctx, f"purged {limit} messages")
+	else:
+		await ctx.send("Insufficient permissions")
 
 @bot.command(aliases=["servers", "serverlist"])
 async def server(ctx):
@@ -187,50 +186,6 @@ async def server(ctx):
 	for guild in activeservers:
 		serverlist.append(guild.name)
 	await ctx.send("\n".join(map(str, serverlist)))
-
-@bot.command()
-async def hibye(ctx):
-	await ctx.send("https://c.tenor.com/xmCVYPzu_j8AAAAC/simpsons-bart-simpson.gif")
-
-
-@bot.command()
-async def thisisfine(ctx):
-	await ctx.send("https://c.tenor.com/MYZgsN2TDJAAAAAC/this-is.gif")
-
-
-@bot.command(aliases=["fd", "dad"])
-async def finddad(ctx):
-	with open("finddad_responses.txt") as f:
-		line = f.readlines()
-	output = str(random.choice(line))
-	await ctx.send(output)
-
-
-@bot.command(aliases=["kiara"])
-async def kimchi(ctx):
-	await ctx.send("🍽️🐶❤️")
-
-@bot.command()
-async def monkey(ctx):
-	await ctx.send("same relatable penis among us !! h ok funny moneky")
-	await ctx.send("https://media.tenor.com/0_6MYrn00tMAAAAd/monkey-kinkytwt.gif")
-
-@bot.command(aliases=["abtin"])
-async def adiba(ctx):
-	await ctx.send("adiba ❤️ abtin")
-
-@bot.command()
-async def matilda(ctx):
-	await ctx.send("chloe smells like ms di leo")
-	await ctx.send("https://media.tenor.com/AukNDGqQS2UAAAAC/bitmoji-emoji.gif")
-
-@bot.command()
-async def sylvia(ctx):
-	await ctx.send("sylvia is mean :(")
-
-
-
-
 
 #Fuck the eco game, introducing music bot
 @bot.command()
@@ -249,8 +204,6 @@ async def test(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, "Bot is currently functional", ctx.message.created_at)
-
 
 @bot.command(aliases=["ss", "statusset", "offline", "online"])
 async def setstatus(ctx, arg):
@@ -276,19 +229,34 @@ async def help(ctx, *args):
 		embed.set_footer(text=f"Today at {time} | {date}")
 		await ctx.send(embed=embed)
 
-
 @bot.event
 async def on_botOffline(ctx):
 	embed = discord.Embed(title="Bot Status", description=f"{errorStatus} Bot is currently offline")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
-	addLog(ctx.message.author, ctx.message.guild, ctx.message.channel, ctx.message.content, "Bot is currently offline", ctx.message.created_at)
 	await ctx.send(embed=embed)
 
-def addLog(user, server, channel, content, output, time):
-	f = open("bot_log.txt","a")
-	f.write("\n\nUser: {}\nLocation: {} -> #{}\nCommand: {}\nResponse: {}\nTime: {}".format(user, server, channel, content, output, time))
-	f.close
+def printLog(logType, ctx, command, info):
+	user = ctx.author.user
+	guild = ctx.guild.name
+	channel = ctx.channel.name
+	timeDate = currentDatetime("TimeDate")
+	if logType == "info":
+		print(f"{timeDate} [INFO] {user} {guild} => {channel} | {command} {info}")
+	elif logType == "gateway":
+		print(f"{timeDate} [GATEWAY] {info}")
+	elif logType == "error":
+		print("error has occured :(")
 
-bot.run(botToken)
+async def load_extensions():
+	for filename in os.listdir("./cogs"):
+		if filename.endswith(".py"):
+			await bot.load_extension(f"cogs.{filename[:-3]}")
+
+async def main():
+	async with bot:
+		await load_extensions()
+		await bot.start(botToken)
+
+asyncio.run(main())
