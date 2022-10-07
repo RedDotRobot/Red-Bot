@@ -1,11 +1,14 @@
 #Import Modules
 from array import array								#No idea
-from ast import alias, operator						#I didn't put that there wtf
+from ast import alias, operator						#I didn"t put that there wtf
 import asyncio
-from http import client								#um
+from email import message_from_string
+from http import client
+from multiprocessing import get_context								#um
 from pydoc import describe							#uh
 from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
-import os											#idfk tbh
+import os
+from turtle import color											#idfk tbh
 import discord										#Discord stuff
 from discord.ext import commands
 from discord import FFmpegAudio
@@ -23,12 +26,12 @@ import re											#RegEx kinda pog
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
 import random										#Game maybe??? (foreshadowing)
+import coloredlogs, logging
 
 #Introduce Bot
 intents = discord.Intents.default()
 intents.message_content = True
-
-bot = commands.Bot(command_prefix='!', intents=intents, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
+bot = commands.Bot(command_prefix="!", intents=intents, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
 load_dotenv()
 botToken = os.getenv("botToken")
 yf.pdr_override()
@@ -49,6 +52,30 @@ def currentDatetime(format):
 		currentTime = datetime.now()
 		formatTimeDate = currentTime.strftime("%d-%m-%Y	%H:%M:%S")
 		return formatTimeDate
+
+#Logger
+logger = logging.getLogger("red-bot.py")
+coloredlogs.install(level="DEBUG", fmt="%(asctime)s [%(levelname)s] %(message)s")
+coloredlogs.DEFAULT_FIELD_STYLES = {
+	"asctime": {"color": "black"},
+	"hostname": {"color": "magenta"},
+	"levelname": {"bold": True, "color": "magenta"},
+	"name": {"color": "blue"},
+	"programname": {"color": "cyan"}, 
+	"username": {"color": "yellow"}
+	}
+
+coloredlogs.DEFAULT_LEVEL_STYLES = {
+	"info": {"color": "grey"},
+	"debug": {"color": "magenta"},
+	"notice": {"color": "magenta"},
+	"spam": {"color": "green", "faint": True},
+	"success": {"bold": True, "color": "green"},
+	"verbose": {"color": "blue"},
+	"error": {"color": "red"},
+	"warning": {"color": "yellow"},
+	"critical": {"bold": True, "color": "red"}
+	}
 
 #Define custom emojis
 onlineStatus = "<:onlineStatus:994214218700169216>"
@@ -90,9 +117,9 @@ async def calc(ctx, arg):
 	equation = equation.replace("x", "*").replace(",", "").replace("^", "**").replace("k", "*1000").replace("m", "*1000000").replace("b", "*1000000000").replace(")(", ")*(")
 	equation = equation.replace("0(", "0*(").replace("2(", "2*(").replace("3(", "3*(").replace("4(", "4*(").replace("5(", "5*(").replace("6(", "6*(").replace("7(", "7*(").replace("8(", "8*(").replace("9(", "9*(").replace(")0", ")*0").replace(")2", ")*2").replace(")3", ")*3").replace(")4", ")*4").replace(")5", ")*5").replace(")6(", ")*6").replace(")7", ")*7").replace(")8", ")*8").replace(")9", ")*9")
 	result = eval(equation)
-	result = f"{result:,.15f}".rstrip('0').rstrip('.')
+	result = f"{result:,.15f}".rstrip("0").rstrip(".")
 	await ctx.send(result)
-	printLog("info", ctx, "calc", None)
+	logger.debug("did mafs")
 
 @bot.command(aliases=["p","latency"])
 async def ping(ctx):
@@ -102,7 +129,6 @@ async def ping(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-	printLog("info", ctx, "ping", None)
 
 @bot.command(aliases=["w"])
 async def weather(ctx):
@@ -149,17 +175,16 @@ async def weather(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	printLog("info", ctx, "weather", None)
 
 @bot.command(aliases=["a","stock"])
 async def asx(ctx, arg):
-	data = yf.download(tickers=arg, period='3mo', interval='1d')
+	data = yf.download(tickers=arg, period="3mo", interval="1d")
 	fig = go.Figure()
-	fig.add_trace(go.Candlestick(x=data.index, open=data['Open'], high=data['High'], low=data['Low'], close=data['Close'], name = 'market data'))
+	fig.add_trace(go.Candlestick(x=data.index, open=data["Open"], high=data["High"], low=data["Low"], close=data["Close"], name = "market data"))
 	arg = arg.upper()
 	fig.update_layout(
-		title=f'{arg} Trade Prices (3 Months)',
-		yaxis_title='Stock Price (USD per Shares)')
+		title=f"{arg} Trade Prices (3 Months)",
+		yaxis_title="Stock Price (USD per Shares)")
 	fig.write_image("Stock_Image/data.png")
 	embed = discord.Embed(title=f"{arg} Stock Information")
 	file = discord.File("Stock_Image/data.png")
@@ -168,14 +193,12 @@ async def asx(ctx, arg):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	printLog("info", ctx, "asx")
 
 @bot.command(aliases=["delete","clear"])
 async def purge(ctx, limit:int):
 	if ctx.author.id == 840418841942294548:
 		limit = limit + 1
 		await ctx.channel.purge(limit=limit)
-		printLog("info", ctx, f"purged {limit} messages")
 	else:
 		await ctx.send("Insufficient permissions")
 
@@ -186,16 +209,6 @@ async def server(ctx):
 	for guild in activeservers:
 		serverlist.append(guild.name)
 	await ctx.send("\n".join(map(str, serverlist)))
-
-#Fuck the eco game, introducing music bot
-@bot.command()
-async def join(ctx):
-	channel = ctx.author.voice.channel
-	await channel.connect()
-
-@bot.command()
-async def leave(ctx):
-	await ctx.voice_client.disconnect()
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
@@ -237,17 +250,15 @@ async def on_botOffline(ctx):
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
 
-def printLog(logType, ctx, command, info):
-	user = ctx.author.user
-	guild = ctx.guild.name
-	channel = ctx.channel.name
-	timeDate = currentDatetime("TimeDate")
+"""async def printLog(logType, user, guild, channel, command, info):
+	print("log printed breakpoint 1")
+	timeDate = currentDatetime("timeDate")
 	if logType == "info":
 		print(f"{timeDate} [INFO] {user} {guild} => {channel} | {command} {info}")
 	elif logType == "gateway":
 		print(f"{timeDate} [GATEWAY] {info}")
 	elif logType == "error":
-		print("error has occured :(")
+		print("error has occured :(")"""
 
 async def load_extensions():
 	for filename in os.listdir("./cogs"):
