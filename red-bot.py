@@ -27,6 +27,7 @@ import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
 import random										#Game maybe??? (foreshadowing)
 import logging, coloredlogs
+import winsound
 
 #Introduce Bot
 intents = discord.Intents.default()
@@ -74,12 +75,10 @@ thunderstormWeather = ["200", "201", "202", "210", "211", "212", "221", "230", "
 snowWeather = ["600", "601", "602", "611", "612", "613", "615", "616", "620", "621", "622"]
 otherWeather = ["701", "711", "721", "731", "741", "751", "761", "762", "771", "781"]
 
-
-
 @bot.event
 async def on_ready():
 	log.info(f"Successfully logged in as {bot.user.name}")
-	print('\a')
+	winsound.Beep(440, 500)
 
 @bot.command(aliases=["c","calculate"])
 async def calc(ctx, arg):
@@ -185,9 +184,10 @@ async def purge(ctx, limit:int):
 	if ctx.author.id == 840418841942294548:
 		limit = limit + 1
 		await ctx.channel.purge(limit=limit)
-		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Deleted {limit} messages")
+		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Deleted {limit-1} messages")
 	else:
 		await ctx.send("Insufficient permissions")
+		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Insufficient permissions")
 
 @bot.command(aliases=["servers", "serverlist"])
 async def server(ctx):
@@ -223,6 +223,7 @@ async def setstatus(ctx, arg):
 			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Bot is now offline")
 	else:
 		ctx.send("Insufficient Permissions")
+		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Insufficient permissions")
 
 @bot.command(aliases=["h","helpmenu"])
 async def help(ctx, *args):
