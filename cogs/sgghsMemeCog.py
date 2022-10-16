@@ -1,13 +1,11 @@
 from discord.ext import commands
 import logging, coloredlogs
 
-log = logging.getLogger("red-bot.py")
-coloredlogs.install(level="INFO", fmt="%(asctime)s [%(levelname)s] %(message)s")
-coloredlogs.DEFAULT_FIELD_STYLES = "spam=22;debug=220;info=34;notice=220;warning=202;success=118,bold;error=124;critical=background=red"
-
 class sgghsMemeCog(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
+		global log
+		log = logging.getLogger("red-bot.py")
 
 	@commands.command(aliases=["kiara", "dog"])
 	async def kimchi(self, ctx):
