@@ -1,4 +1,5 @@
 .env
-bot_log.txt
+bot.log
 execute.bat
 cogs/sgghsMemeCog.py
+cogs/snipe.log

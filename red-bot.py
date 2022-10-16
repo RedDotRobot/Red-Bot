@@ -43,6 +43,9 @@ botClock = "offline"
 log = logging.getLogger("red-bot.py")
 coloredlogs.install(level="INFO", fmt="%(asctime)s [%(levelname)s] %(message)s")
 coloredlogs.DEFAULT_FIELD_STYLES = "spam=22;debug=220;info=34;notice=220;warning=202;success=118,bold;error=124;critical=background=red"
+fh = logging.FileHandler("bot.log")
+fh.setLevel(logging.INFO)
+log.addHandler(fh)
 
 #Do all the weird time shit
 def currentDatetime(format):
