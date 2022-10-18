@@ -3,3 +3,5 @@ bot.log
 execute.bat
 cogs/sgghsMemeCog.py
 cogs/snipe.log
+cogs/marriageCog.py
+cogs/marriageData/

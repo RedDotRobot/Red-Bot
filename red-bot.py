@@ -5,11 +5,11 @@ import asyncio
 from cgitb import handler
 from email import message_from_string
 from http import client
-from multiprocessing import get_context								#um
+from multiprocessing import get_context				#um
 from pydoc import describe							#uh
 from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
 import os
-from turtle import color											#idfk tbh
+from turtle import color							#idfk tbh
 import discord										#Discord stuff
 from discord.ext import commands
 from discord import FFmpegAudio
@@ -86,7 +86,7 @@ async def on_ready():
 @bot.command(aliases=["c","calculate"])
 async def calc(ctx, arg):
 	equation = str(arg)
-	equation = equation.replace("x", "*").replace(",", "").replace("^", "**").replace("k", "*1000").replace("m", "*1000000").replace("b", "*1000000000").replace(")(", ")*(")
+	equation = equation.replace("x", "*").replace("÷", "/").replace(",", "").replace("^", "**").replace("k", "*1000").replace("m", "*1000000").replace("b", "*1000000000").replace(")(", ")*(")
 	equation = equation.replace("0(", "0*(").replace("2(", "2*(").replace("3(", "3*(").replace("4(", "4*(").replace("5(", "5*(").replace("6(", "6*(").replace("7(", "7*(").replace("8(", "8*(").replace("9(", "9*(").replace(")0", ")*0").replace(")2", ")*2").replace(")3", ")*3").replace(")4", ")*4").replace(")5", ")*5").replace(")6(", ")*6").replace(")7", ")*7").replace(")8", ")*8").replace(")9", ")*9")
 	result = eval(equation)
 	result = f"{result:,.15f}".rstrip("0").rstrip(".")

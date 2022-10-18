@@ -26,10 +26,10 @@ class snipeCog(commands.Cog):
 		try:
 			await ctx.send(f"User {snipe_message_author[channel.id]} deleted \"{snipe_message_content[channel.id]}\"")
 			with open("cogs/snipe.log", "a") as f:
-				f.write(f"User {snipe_message_author[channel.id]} deleted {snipe_message_content[channel.id]}")
+				f.write(f"User {snipe_message_author[channel.id]} deleted {snipe_message_content[channel.id]}\n")
 			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !snipe | Returned deleted message")
 			
-		except KeyError:
+		except:
 			await ctx.send(f"No recently deleted messages in #{channel.name}")
 			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !snipe | Error: No deleted messages")
 
