@@ -1,15 +1,6 @@
 #Import Modules
-from array import array								#No idea
-from ast import alias, operator						#I didn"t put that there wtf
 import asyncio
-from cgitb import handler
-from email import message_from_string
-from http import client
-from multiprocessing import get_context				#um
-from pydoc import describe							#uh
-from ssl import OPENSSL_VERSION_NUMBER				#is this a problem
 import os
-from turtle import color							#idfk tbh
 import discord										#Discord stuff
 from discord.ext import commands
 from discord import FFmpegAudio
@@ -19,13 +10,8 @@ from dotenv import load_dotenv						#.env
 from datetime import datetime						#Datetime
 import requests										#JSON Requests
 import json
-import mpmath										#Math shit, another problem for another day
-import numpy as np
-import pandas as pd
-import re											#RegEx kinda pog
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
-import random										#Game maybe??? (foreshadowing)
 import logging, coloredlogs
 import winsound
 
