@@ -43,10 +43,6 @@ def currentDatetime(format):
 		currentTime = datetime.now()
 		formatDate = currentTime.strftime("%d/%m/%Y")
 		return formatDate
-	if format == "timeDate":
-		currentTime = datetime.now()
-		formatTimeDate = currentTime.strftime("%d-%m-%Y	%H:%M:%S")
-		return formatTimeDate
 
 #Define custom emojis
 onlineStatus = "<:onlineStatus:994214218700169216>"
@@ -66,7 +62,7 @@ otherWeather = ["701", "711", "721", "731", "741", "751", "761", "762", "771", "
 
 @bot.event
 async def on_ready():
-	log.info(f"Successfully logged in as {bot.user.name}")
+	await logInfo(f"Successfully logged in as {bot.user.name}")
 	winsound.Beep(440, 500)
 
 @bot.command(aliases=["c","calculate"])
@@ -77,7 +73,7 @@ async def calc(ctx, arg):
 	result = eval(equation)
 	result = f"{result:,.15f}".rstrip("0").rstrip(".")
 	await ctx.send(result)
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !calc")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !calc")
 
 @bot.command(aliases=["p","latency"])
 async def ping(ctx):
@@ -87,7 +83,7 @@ async def ping(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !ping | {latency}")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !ping » {latency}")
 
 @bot.command(aliases=["w"])
 async def weather(ctx):
@@ -134,7 +130,7 @@ async def weather(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !weather")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !weather")
 
 @bot.command(aliases=["a","stock"])
 async def asx(ctx, arg):
@@ -153,10 +149,10 @@ async def asx(ctx, arg):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !asx | Stock value of {arg}")
+	await logInfo(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !asx | Stock value of {arg}")
 
-@bot.command(aliases=["suggest"])
-async def create_suggestion(ctx, title, option1, option2):
+@bot.command(aliases=["poll", "survey"])
+async def suggest(ctx, title, option1, option2):
 	embed=discord.Embed(title="Suggestion", description=title)
 	embed.add_field(name=option1, value="🔴", inline=True)
 	embed.add_field(name=option2, value="🔵", inline=True)
@@ -166,17 +162,17 @@ async def create_suggestion(ctx, title, option1, option2):
 	msg = await ctx.send(embed=embed)
 	await msg.add_reaction("🔴")
 	await msg.add_reaction("🔵")
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !suggest")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !suggest")
 
 @bot.command(aliases=["delete","clear"])
 async def purge(ctx, limit:int):
 	if ctx.author.id == 840418841942294548:
 		limit = limit + 1
 		await ctx.channel.purge(limit=limit)
-		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Deleted {limit-1} messages")
+		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !purge » Deleted {limit-1} messages")
 	else:
 		await ctx.send("Insufficient permissions")
-		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !purge | Insufficient permissions")
+		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !purge » Insufficient permissions")
 
 @bot.command(aliases=["servers", "serverlist"])
 async def server(ctx):
@@ -185,7 +181,7 @@ async def server(ctx):
 	for guild in activeservers:
 		serverlist.append(guild.name)
 	await ctx.send("\n".join(map(str, serverlist)))
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !serverlist")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !serverlist")
 
 @bot.command(aliases=["t","status","botstatus"])
 async def test(ctx):
@@ -194,7 +190,7 @@ async def test(ctx):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-	log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !test")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !test")
 
 @bot.command(aliases=["ss", "statusset", "offline", "online"])
 async def setstatus(ctx, arg):
@@ -204,15 +200,22 @@ async def setstatus(ctx, arg):
 			botStatus = "online"
 			await bot.change_presence(status=discord.Status.online, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"))
 			await ctx.send("Bot is now online")
-			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Bot is now online")
+			await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !setstatus » Bot is now online")
 		elif arg in ["offline", "false", "no"]:
 			botStatus = "offline"
 			await bot.change_presence(status=discord.Status.dnd, activity = discord.Activity(type=discord.ActivityType.watching, name="the world burning around me"))
 			await ctx.send("Bot is now offline")
-			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Bot is now offline")
+			await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !setstatus » Bot is now offline")
 	else:
 		ctx.send("Insufficient Permissions")
-		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !setstatus | Insufficient permissions")
+		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !setstatus » Insufficient permissions")
+
+@bot.command()
+async def confess(ctx, *args):
+	confession = " ".join(args)
+	embed = discord.Embed(title="Anonymous Confession", description=f"\"{confession}\"")
+	await ctx.send(embed=embed)
+
 
 @bot.command(aliases=["h","helpmenu"])
 async def help(ctx, *args):
@@ -222,7 +225,26 @@ async def help(ctx, *args):
 		date = currentDatetime("date")
 		embed.set_footer(text=f"Today at {time} | {date}")
 		await ctx.send(embed=embed)
-		log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !help")
+		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !help")
+
+@bot.command(aliases=["quit", "stop", "exit"])
+async def shutdown(ctx):
+	if ctx.author.id == 840418841942294548:
+		countdown = 5
+		embed = discord.Embed(title="Shutdown Bot", description=f"Shutting down the bot in {countdown}")
+		msg = await ctx.send(embed=embed)
+		for i in range(countdown, -1, -1):
+			embed = discord.Embed(title="Shutdown Bot", description=f"Shutting down the bot in {countdown}")
+			await msg.edit(embed=embed)
+			countdown = i
+			await asyncio.sleep(1)
+		embed = discord.Embed(title="Shutdown Bot", description=f"Bot is now offline")
+		await msg.edit(embed=embed)
+		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !shutdown | Shutdown bot")
+		await logInfo(msg="Bot has been shut down")
+		exit()
+	else:
+		await ctx.send("Insufficient Permissions")
 
 @bot.event
 async def on_botOffline(ctx):
@@ -232,6 +254,19 @@ async def on_botOffline(ctx):
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
 
+async def logInfo(msg):
+	log.info(msg=msg)
+	channel = bot.get_channel(1038017545690693702)
+	time = currentDatetime("time")
+	date = currentDatetime("date")
+
+async def logError(msg):
+	log.error(msg=msg)
+	channel = bot.get_channel(1038017545690693702)
+	time = currentDatetime("time")
+	date = currentDatetime("date")
+
+
 async def load_extensions():
 	for filename in os.listdir("./cogs"):
 		if filename.endswith(".py"):
@@ -240,7 +275,7 @@ async def load_extensions():
 async def main():
 	async with bot:
 		await load_extensions()
-		log.info("Loaded extensions")
+		await logInfo("Loaded extensions")
 		await bot.start(botToken)
 
 asyncio.run(main())
