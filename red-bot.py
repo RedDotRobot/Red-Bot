@@ -247,6 +247,7 @@ Creates a suggestion poll with reactions.
 **!test**
 Pings bot with blank packet.
 """)
+
 		time = currentDatetime("time")
 		date = currentDatetime("date")
 		embed.set_footer(text=f"Today at {time} | {date}")
