@@ -16,7 +16,7 @@ import logging, coloredlogs
 import winsound
 
 #Introduce Bot
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
 load_dotenv()
@@ -62,8 +62,10 @@ otherWeather = ["701", "711", "721", "731", "741", "751", "761", "762", "771", "
 
 @bot.event
 async def on_ready():
+	global botLogChannel
 	await logInfo(f"Successfully logged in as {bot.user.name}")
 	winsound.Beep(440, 500)
+	botLogChannel = bot.get_channel(1038017545690693702)
 
 @bot.command(aliases=["c","calculate"])
 async def calc(ctx, arg):
@@ -212,15 +214,39 @@ async def setstatus(ctx, arg):
 
 @bot.command()
 async def confess(ctx, *args):
+	await ctx.channel.purge(limit=1)
 	confession = " ".join(args)
-	embed = discord.Embed(title="Anonymous Confession", description=f"\"{confession}\"")
+	with open(f"serverData/{ctx.guild.id}", "r+") as f:
+		confessionNumber = int(f.read()) + 1
+		f.seek(0)
+		f.write(str(confessionNumber))
+		f.truncate()
+	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"")
+	time = currentDatetime("time")
+	date = currentDatetime("date")
+	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(embed=embed)
-
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !confess » \"{confession}\"")
 
 @bot.command(aliases=["h","helpmenu"])
 async def help(ctx, *args):
 	if len(args) == 0:
-		embed = discord.Embed(title="**Help Menu**", description="List of commands. For additional assistance, contact `RedDotRobot#7360`\n\n`help`	 Shows this menu\n`calc`	 Simple calculator\n`weather`  Shows current weather in Sydney\n`purge`	Deletes specified number of messages\n`ping`	 Outputs bot latency\n`test`	 Shows if bot is currently functional\nFor additional assistance, contact `RedDotRobot#7360`")
+		embed = discord.Embed(title="Help Menu", description="""
+**!calc <expr>**
+Calculates simple expressions. Due to float point arithmetic limitations, results may not be accurate.
+
+**!weather**
+Shows the current weather in Sydney.
+
+**!asx <stock_code>**
+Returns graph of specified stock. Can be used on NASDAQ share codes.
+
+**!suggest <"suggestion1"> <"suggestion 2">**
+Creates a suggestion poll with reactions.
+
+**!test**
+Pings bot with blank packet.
+""")
 		time = currentDatetime("time")
 		date = currentDatetime("date")
 		embed.set_footer(text=f"Today at {time} | {date}")
@@ -256,7 +282,6 @@ async def on_botOffline(ctx):
 
 async def logInfo(msg):
 	log.info(msg=msg)
-	channel = bot.get_channel(1038017545690693702)
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 
