@@ -18,7 +18,7 @@ import winsound
 #Introduce Bot
 intents = discord.Intents.all()
 intents.message_content = True
-bot = commands.Bot(command_prefix="!", intents=intents, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
+bot = commands.Bot(command_prefix="!", intents=intents, activity=discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"), help_command=None)
 load_dotenv()
 botToken = os.getenv("botToken")
 yf.pdr_override()
@@ -200,7 +200,7 @@ async def setstatus(ctx, arg):
 		global botStatus
 		if arg in ["online", "yes", "true"]:
 			botStatus = "online"
-			await bot.change_presence(status=discord.Status.online, activity = discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"))
+			await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name="the cries of young children"))
 			await ctx.send("Bot is now online")
 			await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !setstatus » Bot is now online")
 		elif arg in ["offline", "false", "no"]:
