@@ -12,6 +12,7 @@ import requests										#JSON Requests
 import json
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
+from decimal import Decimal
 import logging, coloredlogs
 import winsound
 
@@ -80,7 +81,7 @@ async def calc(ctx, arg):
 @bot.command(aliases=["p","latency"])
 async def ping(ctx):
 	latency = f"{bot.latency*1000:0.2f}"
-	embed=discord.Embed(title="Bot Latency", description=f"Current ping is {latency}ms".format(bot.latency*1000))
+	embed=discord.Embed(title="Bot Latency", description=f"Current ping is {latency}ms")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
@@ -127,7 +128,7 @@ async def weather(ctx):
 		embed.set_image(url="attachment://thunderstormWeatherIMG.gif")
 	elif weatherID in snowWeather: #Snow
 		file = discord.File("Weather_Images/snowWeatherIMG.gif")
-		embed.set_image(url="attachment://snowWeatherIMG.gif")	
+		embed.set_image(url="attachment://snowWeatherIMG.gif")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
@@ -151,7 +152,7 @@ async def asx(ctx, arg):
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
 	await ctx.send(file=file, embed=embed)
-	await logInfo(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !asx | Stock value of {arg}")
+	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !asx | Stock value of {arg}")
 
 @bot.command(aliases=["poll", "survey"])
 async def suggest(ctx, title, option1, option2):
