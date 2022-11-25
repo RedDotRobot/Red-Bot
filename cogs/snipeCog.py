@@ -1,4 +1,3 @@
-from calendar import c
 from discord.ext import commands
 import asyncio
 import logging, coloredlogs
@@ -28,10 +27,10 @@ class snipeCog(commands.Cog):
 		channel = ctx.channel
 		try:
 			await ctx.send(f"User {snipe_message_author[channel.id]} deleted \"{snipe_message_content[channel.id]}\"")
-			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !snipe | Returned deleted message")
+			log.info(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !snipe » Returned deleted message")
 		except:
 			await ctx.send(f"No recently deleted messages in #{channel.name}")
-			log.info(msg=f"{ctx.message.guild} > #{ctx.message.channel} | {ctx.message.author} | !snipe | Error: No deleted messages")
+			log.info(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !snipe » Error: No deleted messages")
 
 async def setup(bot):
 	await bot.add_cog(snipeCog(bot))

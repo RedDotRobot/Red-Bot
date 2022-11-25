@@ -1,6 +1,7 @@
 #Import Modules
 import asyncio
 import os
+import sys
 import discord										#Discord stuff
 from discord.ext import commands
 from discord import FFmpegAudio
@@ -12,7 +13,7 @@ import requests										#JSON Requests
 import json
 import yfinance as yf								#ASX lesh go
 import plotly.graph_objs as go
-from decimal import Decimal
+import os.path
 import logging, coloredlogs
 import winsound
 
@@ -215,17 +216,17 @@ async def setstatus(ctx, arg):
 
 @bot.command()
 async def confess(ctx, *args):
-	await ctx.channel.purge(limit=1)
 	confession = " ".join(args)
-	with open(f"serverData/{ctx.guild.id}", "r+") as f:
-		confessionNumber = int(f.read()) + 1
-		f.seek(0)
-		f.write(str(confessionNumber))
-		f.truncate()
+	with open(f"serverData/{ctx.guild.id}.txt", "w+") as f:
+		try:
+			confessionNumber = int(f.read()) + 1
+		except:
+			confessionNumber = 1
 	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
+	await ctx.channel.purge(limit=1)
 	await ctx.send(embed=embed)
 	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !confess » \"{confession}\"")
 
@@ -270,7 +271,7 @@ async def shutdown(ctx):
 		await msg.edit(embed=embed)
 		await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !shutdown | Shutdown bot")
 		await logInfo(msg="Bot has been shut down")
-		exit()
+		sys.exit()
 	else:
 		await ctx.send("Insufficient Permissions")
 

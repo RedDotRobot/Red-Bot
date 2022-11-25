@@ -26,5 +26,13 @@ class memeCog(commands.Cog):
 		await ctx.send(output)
 		log.info(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !finddad")
 
+	@commands.command(aliases=["roast"])
+	async def insult(self, ctx):
+		with open("insults.txt") as f:
+			line = f.readlines()
+		output = str(random.choice(line))
+		await ctx.send(output)
+		log.info(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !insult")
+
 async def setup(bot):
 	await bot.add_cog(memeCog(bot))
