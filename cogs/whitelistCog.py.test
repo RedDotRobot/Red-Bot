@@ -2,7 +2,7 @@ from discord.ext import commands
 import asyncio
 import logging, coloredlogs
 
-class snipeCog(commands.Cog):
+class whitelistCog(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		global log
@@ -19,4 +19,4 @@ class snipeCog(commands.Cog):
 					log.info(f"{ctx.message.guild} » #{ctx.message.channel} | {member.name} | whitelist » User {member.name} was banned.")
 
 async def setup(bot):
-	await bot.add_cog(snipeCog(bot))
+	await bot.add_cog(whitelistCog(bot))

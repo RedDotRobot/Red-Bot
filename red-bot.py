@@ -222,7 +222,7 @@ async def confess(ctx, *args):
 			confessionNumber = int(f.read()) + 1
 		except:
 			confessionNumber = 1
-	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"")
+	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"", colour="FFADAD")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
