@@ -16,6 +16,7 @@ import plotly.graph_objs as go
 import os.path
 import logging, coloredlogs
 import winsound
+import random
 
 #Introduce Bot
 intents = discord.Intents.all()
@@ -216,17 +217,17 @@ async def setstatus(ctx, arg):
 
 @bot.command()
 async def confess(ctx, *args):
+	await ctx.message.delete()
 	confession = " ".join(args)
 	with open(f"serverData/{ctx.guild.id}.txt", "w+") as f:
-		try:
-			confessionNumber = int(f.read()) + 1
-		except:
-			confessionNumber = 1
-	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"", colour="FFADAD")
+		confessionNumber = int(f.read()) + 1
+	with open(f"colourList.txt") as f:
+		line = f.readlines()
+	colour = str(random.choice(line))
+	embed = discord.Embed(title=f"Anonymous Confession (#{confessionNumber})", description=f"\"{confession}\"", colour=discord.Colour.from_str(colour))
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
-	await ctx.channel.purge(limit=1)
 	await ctx.send(embed=embed)
 	await logInfo(msg=f"{ctx.message.guild} » #{ctx.message.channel} | {ctx.message.author} | !confess » \"{confession}\"")
 
