@@ -12,7 +12,7 @@ class chatCog(commands.Cog):
 		self.bot = bot
 
 	@commands.command()
-	async def chat(ctx, *args):
+	async def chat(self, ctx, *args):
 		prompt = " ".join(args)
 		response = openai.Completion.create(
 			engine="text-davinci-002",
@@ -21,10 +21,7 @@ class chatCog(commands.Cog):
 			n=1,
 			stop=None
 )
-		text = response['choices'][0]['text']
-		embed = discord.Embed(title="OpenAI Chat Bot")
-		embed.add_field(name=f"{prompt}", value=text)
-		await ctx.send(embed=embed)
+		await ctx.send(f"**OpenAI ChatGPT**\n>>> {response}")
 
 async def setup(bot):
 	await bot.add_cog(chatCog(bot))

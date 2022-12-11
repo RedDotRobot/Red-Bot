@@ -220,7 +220,7 @@ async def confess(ctx, *args):
 	await ctx.message.delete()
 	confession = " ".join(args)
 	with open(f"serverData/{ctx.guild.id}.txt", "w+") as f:
-		confessionNumber = int(f.read()) + 1
+		confessionNumber = 5
 	with open(f"colourList.txt") as f:
 		line = f.readlines()
 	colour = str(random.choice(line))
