@@ -4,9 +4,6 @@ import os
 import sys
 import discord										#Discord stuff
 from discord.ext import commands
-from discord import FFmpegAudio
-from discord import TextChannel
-from youtube_dl import YoutubeDL
 from dotenv import load_dotenv						#.env
 from datetime import datetime						#Datetime
 import requests										#JSON Requests
