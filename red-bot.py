@@ -146,10 +146,10 @@ async def asx(ctx, arg):
 	fig.update_layout(
 		title=f"{arg} Trade Prices (3 Months)",
 		yaxis_title="Stock Price (USD per Shares)")
-	fig.write_image("Stock_Image/data.png")
+	fig.write_image("variableImage/stockData.png")
 	embed = discord.Embed(title=f"{arg} Stock Information")
-	file = discord.File("Stock_Image/data.png")
-	embed.set_image(url="attachment://data.png")
+	file = discord.File("variableImage/stockData.png")
+	embed.set_image(url="attachment://stockData.png")
 	time = currentDatetime("time")
 	date = currentDatetime("date")
 	embed.set_footer(text=f"Today at {time} | {date}")
@@ -294,7 +294,6 @@ async def logError(msg):
 	channel = bot.get_channel(1038017545690693702)
 	time = currentDatetime("time")
 	date = currentDatetime("date")
-
 
 async def load_extensions():
 	for filename in os.listdir("./cogs"):
